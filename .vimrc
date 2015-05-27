@@ -163,14 +163,14 @@ endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
-""""""""""""" UNDER CONSTRUCTION
-
-" Folding
-set foldnestmax=10      "deepest fold is 10 levels
-set nofoldenable        "dont fold by default
-set foldmethod=syntax
-" set foldmethod=indent   "fold based on indent
-set foldlevelstart=1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Folding
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nofoldenable        " dont fold by default
+set foldlevelstart=10   " open most folds by default
+set foldnestmax=10      " deepest fold is 10 levels
+set foldmethod=syntax   " fold based on syntax
+"set foldmethod=indent   "fold based on indent
 let javaScript_fold=1         " JavaScript
 let perl_fold=1               " Perl
 let php_folding=1             " PHP
@@ -179,6 +179,9 @@ let ruby_fold=1               " Ruby
 let sh_fold_enabled=1         " sh
 let vimsyn_folding='af'       " Vim script
 let xml_syntax_folding=1      " XML
+
+""""""""""""" UNDER CONSTRUCTION
+
 
 "Custom file extensions
 let asmsyntax='armasm' 
