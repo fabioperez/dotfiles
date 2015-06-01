@@ -28,7 +28,11 @@ highlight SignColumn ctermbg=white
 Plugin 'tpope/vim-fugitive'             " Git
 Plugin 'Mark'
 
-set laststatus=2
+" Colorschemes
+Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'tomasr/molokai'
+Plugin 'altercation/vim-colors-solarized'
+
 "Plugin 'mattn/zencoding-vim'
 "Plugin 'ervandew/supertab' 
 "Plugin 'pangloss/vim-javascript'
@@ -55,6 +59,7 @@ set nowritebackup
 set noswapfile
 set mouse=a               " enable mouse
 set t_Co=256              " force vim to use 256 colours
+set laststatus=2          " show status line
 
 " use ; as :
 nnoremap ; :
@@ -106,11 +111,11 @@ nnoremap N Nzzzv
 " => Colours and Fonts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable             " syntax highlighting
-colorscheme molokai
 set background=light  
 set encoding=utf-8
 set ffs=unix,dos,mac      " use unix as the standard file type
 set cursorline            " highlight current line
+colorscheme molokai
 
 let g:Powerline_symbols="fancy"
 let g:airline_powerline_fonts = 1
@@ -194,9 +199,8 @@ au! Syntax dasc source $HOME/util/vim-scripts/dasc.vim
 " Quickly edit/reload the vimrc file
 " <space>ev (edit) | <space>sv (save and reload)
 nmap <silent> <leader>ev :e ~/.vimrc<CR> 
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nmap <silent> <leader>sv :source ~/.vimrc<CR>
 
 " CMD+i Auto-indent entire file
 "map <D-i> mqHmwgg=G`wzt`q
-
 
