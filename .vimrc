@@ -115,7 +115,12 @@ set background=light
 set encoding=utf-8
 set ffs=unix,dos,mac      " use unix as the standard file type
 set cursorline            " highlight current line
-colorscheme molokai
+
+" Try to load colorscheme
+try
+    colorscheme molokai
+catch /^Vim\%((\a\+)\)\=:E185/
+endtry
 
 let g:Powerline_symbols="fancy"
 let g:airline_powerline_fonts = 1
