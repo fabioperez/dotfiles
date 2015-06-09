@@ -31,3 +31,8 @@ wget "https://raw.githubusercontent.com/fabioperez/dotfiles/master/dottools/vims
 bash vimstall.sh
 rm -f vimstall.sh
 ```
+
+#### tmux
+```
+wget -q https://raw.githubusercontent.com/fabioperez/dotfiles/master/.tmux.conf -O ~/.tmux.conf
+```
