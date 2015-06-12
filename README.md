@@ -3,7 +3,7 @@
 #### Install softwares
 * Debian/Ubuntu
 ```
-sudo apt-get install ack aria2 cmake ctags curl g++ gcc git tmux vim wget zsh
+sudo apt-get install ack-grep aria2 cmake ctags curl g++ gcc git tmux vim wget zsh
 ```
 
 * Mac OS X
