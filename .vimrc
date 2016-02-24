@@ -76,7 +76,8 @@ set scrolloff=10            " when moving with j/k show at least
 set wildmenu                " improve vim command-line completion 
 set wildignore=*.o,*~,*.pyc " ignore compiled files
 set ruler                   " show line number on status bar
-set number                  " show line numbers
+set number                  " show current line number
+set relativenumber          " show relative line numbers
 set hidden                  " keep file hidden when buffer is changed
 set backspace=indent,eol,start
 set whichwrap+=h,l          " wrap when using h/l
