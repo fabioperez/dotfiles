@@ -83,6 +83,7 @@ set whichwrap+=h,l          " wrap when using h/l
 set lazyredraw              " don't redraw while executing macros
 set visualbell              " don't beep
 set noerrorbells            " don't beep
+set diffopt+=vertical       " use vertical diff
 
 " Show matching brackets when text indicator is over them
 set showmatch
