@@ -19,14 +19,12 @@ Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 Plugin 'mileszs/ack.vim'                " Ack for vim
 Plugin 'scrooloose/nerdcommenter'       " Easy commenting
-"Plugin 'wincent/command-t'
 Plugin 'sukima/xmledit'
 Plugin 'bling/vim-airline'              " Status bar
 Plugin 'airblade/vim-gitgutter'         " Inline git status
-Plugin 'MattesGroeger/vim-bookmarks'
-highlight SignColumn ctermbg=white
 Plugin 'tpope/vim-fugitive'             " Git
 Plugin 'Mark'
+Plugin 'ctrlpvim/ctrlp.vim'             " Fuzzy file search
 
 " Colorschemes
 Plugin 'NLKNguyen/papercolor-theme'
