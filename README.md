@@ -1,6 +1,6 @@
 # dotfiles
 
-#### Install softwares
+## Install softwares
 * Debian/Ubuntu
 ```
 sudo apt-get install -y ack-grep aria2 cmake ctags curl g++ gcc git tmux vim wget zsh
@@ -11,6 +11,7 @@ sudo apt-get install -y ack-grep aria2 cmake ctags curl g++ gcc git tmux vim wge
 brew install vim
 brew install zsh
 ```
+## Config files
 
 #### zsh
 ```
@@ -24,7 +25,6 @@ done
 chsh -s /bin/zsh
 ```
 
-
 #### vim
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/fabioperez/dotfiles/master/dottools/vimstall.sh)
@@ -33,4 +33,15 @@ bash <(curl -fsSL https://raw.githubusercontent.com/fabioperez/dotfiles/master/d
 #### tmux
 ```
 wget -q https://raw.githubusercontent.com/fabioperez/dotfiles/master/.tmux.conf -O ~/.tmux.conf
+```
+
+## Tweaks
+
+#### Ubuntu 14.04
+
+##### Caps Lock as Control
+Add the following line to `/etc/default/keyboard`:
+
+```
+XKBOPTIONS=“ctrl:nocaps”
 ```
