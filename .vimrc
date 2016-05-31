@@ -65,6 +65,9 @@ nnoremap ; :
 noremap <SPACE> <Nop>
 let mapleader=" "
 
+" remove leader key timeout
+set notimeout
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
