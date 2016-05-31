@@ -23,7 +23,6 @@ Plugin 'sukima/xmledit'
 Plugin 'bling/vim-airline'              " Status bar
 Plugin 'airblade/vim-gitgutter'         " Inline git status
 Plugin 'tpope/vim-fugitive'             " Git
-Plugin 'Mark'
 Plugin 'ctrlpvim/ctrlp.vim'             " Fuzzy file search
 
 " Colorschemes
