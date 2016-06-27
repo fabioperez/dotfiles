@@ -43,5 +43,5 @@ wget -q https://raw.githubusercontent.com/fabioperez/dotfiles/master/.tmux.conf 
 Add the following line to `/etc/default/keyboard`:
 
 ```
-XKBOPTIONS=“ctrl:nocaps”
+XKBOPTIONS="ctrl:nocaps"
 ```
