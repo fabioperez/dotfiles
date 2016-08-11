@@ -1,9 +1,9 @@
 # dotfiles
 
 ## Install softwares
-* Debian/Ubuntu
+### Debian/Ubuntu
 ```
-sudo apt-get install -y ack-grep aria2 cmake ctags curl git tmux vim wget zsh xclip
+sudo apt-get install -y ack-grep aria2 cmake ctags curl git tmux vim wget xclip
 ```
 
 Use carefully:
@@ -11,8 +11,12 @@ Use carefully:
 sudo apt-get install g++ gcc
 ```
 
+* Zsh
 
-* Mac OS X
+[Compile](https://gist.github.com/nicoulaj/715855) from [source](http://zsh.sourceforge.net/Arc/source.html).
+
+
+### Mac OS X
 ```
 brew install vim
 brew install zsh
@@ -20,17 +24,8 @@ brew install zsh
 ## Config files
 
 #### zsh
-```
-# Install prezto
-zsh
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
-chsh -s /bin/zsh
-wget -q https://raw.githubusercontent.com/fabioperez/dotfiles/master/.zshrc -O ~/.zshrc
-```
+
+Install [Prezto](https://github.com/sorin-ionescu/prezto).
 
 #### vim
 ```
