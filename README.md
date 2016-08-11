@@ -3,7 +3,7 @@
 ## Install softwares
 ### Debian/Ubuntu
 ```
-sudo apt-get install -y ack-grep aria2 cmake ctags curl git tmux vim wget xclip
+sudo apt-get install -y ack-grep aria2 cmake ctags curl git tmux tree vim wget xclip
 ```
 
 Use carefully:
