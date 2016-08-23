@@ -11,11 +11,11 @@ Use carefully:
 sudo apt-get install g++ gcc
 ```
 
-* Zsh
+#### Zsh
 
 [Compile](https://gist.github.com/nicoulaj/715855) from [source](http://zsh.sourceforge.net/Arc/source.html).
 
-* [Powerline fonts](http://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin)
+#### [Powerline fonts](http://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin)
 
 ```
 sudo -i
@@ -37,14 +37,11 @@ brew install zsh
 
 Install [Prezto](https://github.com/sorin-ionescu/prezto).
 
-#### vim
+#### vim + tmux
 ```
-bash <(curl -fsSL https://raw.githubusercontent.com/fabioperez/dotfiles/master/dottools/vimstall.sh)
-```
-
-#### tmux
-```
-wget -q https://raw.githubusercontent.com/fabioperez/dotfiles/master/.tmux.conf -O ~/.tmux.conf
+git clone https://github.com/fabioperez/dotfiles/ .dotfiles
+ln -fs ~/.dotfiles/.tmux-2.2.conf ~/.tmux.conf
+bash ~/.dotfiles/dottools/vimstall.sh
 ```
 
 ## Tweaks
