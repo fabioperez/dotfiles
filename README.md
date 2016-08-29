@@ -3,7 +3,7 @@
 ## Install softwares
 ### Debian/Ubuntu
 ```
-sudo apt-get install -y ack-grep aria2 cmake ctags curl git tmux tree vim wget xclip
+sudo apt-get install -y ack-grep aria2 cmake ctags curl git tree vim wget xclip
 ```
 
 Use carefully:
@@ -11,6 +11,17 @@ Use carefully:
 sudo apt-get install g++ gcc
 ```
 
+#### tmux
+    sudo apt-get -y remove tmux
+    sudo apt-get -y install libevent-dev ncurses-dev
+    cd ~
+    wget https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz
+    tar -zxf tmux-2.2.tar.gz
+    (cd tmux-2.2
+    ./configure && make
+    sudo make install)
+    rm -rf tmux-2.2
+  
 #### Zsh
 
 [Compile](https://gist.github.com/nicoulaj/715855) from [source](http://zsh.sourceforge.net/Arc/source.html).
