@@ -3,8 +3,16 @@ autoload zmv
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias ack='ack-grep'
-alias reload='source ~/.zshrc'
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+function reload {
+    (
+      echo "Updating dotfiles..."
+      cd ~/.dotfiles
+      git pull
+    )
+    source ~/.zshrc
+    tmux source-file ~/.tmux.conf
+}
