@@ -73,5 +73,5 @@ XKBOPTIONS="ctrl:nocaps"
 Then run:
 
 ```
-sudo dpkg-reconfigure keyboard-configuration
+sudo dpkg-reconfigure -phigh console-setup
 ```
