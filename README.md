@@ -69,3 +69,9 @@ Add the following line to `/etc/default/keyboard`:
 ```
 XKBOPTIONS="ctrl:nocaps"
 ```
+
+Then run:
+
+```
+sudo dpkg-reconfigure keyboard-configuration
+```
