@@ -1,6 +1,7 @@
 #!/bin/bash
 
-VIMRC_PATH="https://raw.githubusercontent.com/fabioperez/dotfiles/master/.vimrc"
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
 VUNDLE_PATH="https://github.com/gmarik/Vundle.vim.git"
 
 # Terminal colours
@@ -34,8 +35,8 @@ rm -f ~/.vimrc
 # Install Vundle
 (git clone "${VUNDLE_PATH}" ~/.vim/bundle/Vundle.vim > /dev/null) || { echo "Could not clone Vundle"; exit 1; }
 
-# Get .vimrc 
-(wget -P ~/ "${VIMRC_PATH}" &> /dev/null) || { echo "Could not fetch .vimrc file"; exit 1; }
+# Link .vimrc
+ln -fs $SCRIPTPATH/../.vimrc ~/.vimrc
 
 # Install Plugins with Vundle
 vim +PluginInstall +qall now
