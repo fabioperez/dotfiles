@@ -136,7 +136,7 @@ set smarttab
 set shiftwidth=4            " one tab = 4 spaces (indentation) 
 set softtabstop=4           " insert / delete 4 spaces at time
 set autoindent              " copy current line indent to new lines
-set smartindent 
+set cindent
 set wrap                    " wrap lines
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
