@@ -7,6 +7,8 @@ alias ack='ack-grep'
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+prompt paradox
+
 function reload {
     (
       echo "Updating dotfiles..."
