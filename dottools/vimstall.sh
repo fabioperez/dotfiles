@@ -38,6 +38,9 @@ rm -f ~/.vimrc
 # Link .vimrc
 ln -fs $SCRIPTPATH/../.vimrc ~/.vimrc
 
+# Create undo path
+mkdir -p ~/.vim/undo
+
 # Install Plugins with Vundle
 vim +PluginInstall +qall now
 

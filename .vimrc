@@ -48,7 +48,6 @@ call vundle#end()
 " => General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set history=8000          " set long history
-set undolevels=20000      " undo memory
 filetype plugin indent on " enable filetype plugins
 set autoread              " watch for file changes outside vim
 set nobackup              " disable old backup and swap
@@ -174,6 +173,14 @@ func! DeleteTrailingWS()
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Additional functions
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set undofile                " Save undo's after file closes
+set undodir=$HOME/.vim/undo " where to save undo histories
+set undolevels=10000        " How many undos
+set undoreload=10000        " number of lines to save for undo
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Folding
