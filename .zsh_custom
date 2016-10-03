@@ -18,3 +18,10 @@ function reload {
     source ~/.zshrc
     tmux source-file ~/.tmux.conf
 }
+
+function prezto-update {
+    (
+      cd ~/.zprezto/
+      git pull && git submodule update --init --recursive
+    )
+}
