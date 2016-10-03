@@ -132,8 +132,8 @@ let g:airline_powerline_fonts = 1
 filetype plugin indent on   " detect filetype
 set expandtab               " convert tabs to spaces
 set smarttab                 
-set shiftwidth=4            " one tab = 4 spaces (indentation) 
-set softtabstop=4           " insert / delete 4 spaces at time
+set shiftwidth=2            " one tab = 4 spaces (indentation) 
+set softtabstop=2           " insert / delete 4 spaces at time
 set autoindent              " copy current line indent to new lines
 set cindent
 set wrap                    " wrap lines
