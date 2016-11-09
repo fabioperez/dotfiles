@@ -19,11 +19,11 @@ Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 Plugin 'mileszs/ack.vim'                " Ack for vim
 Plugin 'scrooloose/nerdcommenter'       " Easy commenting
-Plugin 'sukima/xmledit'
 Plugin 'bling/vim-airline'              " Status bar
 Plugin 'airblade/vim-gitgutter'         " Inline git status
 Plugin 'tpope/vim-fugitive'             " Git
 Plugin 'ctrlpvim/ctrlp.vim'             " Fuzzy file search
+Plugin 'tpope/vim-surround'
 
 " Colorschemes
 Plugin 'NLKNguyen/papercolor-theme'
@@ -35,6 +35,7 @@ Plugin 'altercation/vim-colors-solarized'
 "Plugin 'pangloss/vim-javascript'
 "Plugin 'Townk/vim-autoclose'
 "Plugin 'kshenoy/vim-signature'
+"Plugin 'sukima/xmledit'
 
 " Snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -207,6 +208,9 @@ let asmsyntax='armasm'
 let filetype_inc='armasm'
 au! BufRead,BufNewFile *.dasc           setfiletype dasc
 au! Syntax dasc source $HOME/util/vim-scripts/dasc.vim
+
+" Surround
+nmap <silent> <leader>su ysiw
 
 " SHORTCUTS
 
