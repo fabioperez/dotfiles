@@ -21,6 +21,8 @@ sudo apt-get install g++ gcc
     ./configure && make
     sudo make install)
     rm -rf tmux-2.2
+
+Open tmux and hit `prefix + I` to download the plugins.
   
 #### Zsh
 
