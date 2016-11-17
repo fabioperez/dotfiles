@@ -46,17 +46,23 @@ brew install zsh
 ```
 ## Config files
 
+Clone dotfiles:
+
+```
+git clone https://github.com/fabioperez/dotfiles/ .dotfiles
+```
+
 #### zsh
 
-Install [Prezto](https://github.com/sorin-ionescu/prezto).
+1. Install [Prezto](https://github.com/sorin-ionescu/prezto).
 
+2. Source custom zsh config:
 ```
 echo -e '\nsource "$HOME/.dotfiles/.zsh_custom"' >> ~/.zshrc
 ```
 
 #### vim + tmux
 ```
-git clone https://github.com/fabioperez/dotfiles/ .dotfiles
 ln -fs ~/.dotfiles/.tmux-2.2.conf ~/.tmux.conf
 bash ~/.dotfiles/dottools/vimstall.sh
 ```
