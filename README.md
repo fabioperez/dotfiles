@@ -21,6 +21,7 @@ sudo apt-get install g++ gcc
     ./configure && make
     sudo make install)
     rm -rf tmux-2.2
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 Open tmux and hit `prefix + I` to download the plugins.
   
