@@ -1,14 +1,13 @@
 autoload zmv
 
-# Linux-only commands
-if [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+if [ "$(uname)" = "Darwin" ]; then
+  # Mac-only commands
+elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+  # Linux-only commands
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 fi
 
-# Mac-only commands
-if [ "$(uname)" = "Darwin" ]; then
-fi
 
 alias ack='ack-grep'
 

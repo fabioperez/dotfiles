@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SCRIPT=$(readlink -f "$0")
-SCRIPTPATH=$(dirname "$SCRIPT")
+SCRIPTPATH=$(cd "$(dirname "$0")" && pwd)
+echo $SCRIPTPATH
 VUNDLE_PATH="https://github.com/gmarik/Vundle.vim.git"
 
 # Terminal colours
@@ -36,6 +36,7 @@ rm -f ~/.vimrc
 (git clone "${VUNDLE_PATH}" ~/.vim/bundle/Vundle.vim > /dev/null) || { echo "Could not clone Vundle"; exit 1; }
 
 # Link .vimrc
+echo $SCRIPTPATH/../.vimrc
 ln -fs $SCRIPTPATH/../.vimrc ~/.vimrc
 
 # Create undo path
