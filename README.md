@@ -11,6 +11,15 @@ Use carefully:
 sudo apt-get install g++ gcc
 ```
 
+#### Guake
+
+    sudo apt-get install python-dbus
+
+    git clone https://github.com/Guake/guake
+    (cd guake
+    ./dev.sh --install)
+    rm -rf guake
+
 #### tmux
     sudo apt-get -y remove tmux
     sudo apt-get -y install libevent-dev ncurses-dev
