@@ -36,7 +36,7 @@ Open tmux and hit `prefix + I` to download the plugins.
   
 #### Zsh
 
-[Compile](https://gist.github.com/nicoulaj/715855) from [source](http://zsh.sourceforge.net/Arc/source.html).
+[Compile](https://gist.github.com/fabioperez/b64085688a8df5208ce617c78377185c) from [source](http://zsh.sourceforge.net/Arc/source.html).
 
 #### [Powerline fonts](http://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin)
 
