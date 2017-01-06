@@ -59,7 +59,7 @@ brew install zsh
 Clone dotfiles:
 
 ```
-git clone https://github.com/fabioperez/dotfiles/ .dotfiles
+git clone https://github.com/fabioperez/dotfiles/ ~/.dotfiles
 ```
 
 #### zsh
