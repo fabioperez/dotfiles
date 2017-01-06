@@ -1,5 +1,11 @@
 # dotfiles
 
+First, clone dotfiles:
+
+```
+git clone https://github.com/fabioperez/dotfiles/ ~/.dotfiles
+```
+
 ## Install softwares
 ### Debian/Ubuntu
 ```
@@ -36,8 +42,8 @@ Open tmux and hit `prefix + I` to download the plugins.
   
 #### Zsh
 
-[Compile](https://gist.github.com/fabioperez/b64085688a8df5208ce617c78377185c) from [source](http://zsh.sourceforge.net/Arc/source.html).
-
+    bash ~/.dotfiles/dottools/build-zsh.sh
+    
 #### [Powerline fonts](http://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin)
 
 ```
@@ -55,12 +61,6 @@ brew install vim
 brew install zsh
 ```
 ## Config files
-
-Clone dotfiles:
-
-```
-git clone https://github.com/fabioperez/dotfiles/ ~/.dotfiles
-```
 
 #### zsh
 
