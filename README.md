@@ -9,7 +9,7 @@ git clone https://github.com/fabioperez/dotfiles/ ~/.dotfiles
 ## Install softwares
 ### Debian/Ubuntu
 ```
-sudo apt-get install -y ack-grep aria2 cmake ctags curl git tree vim wget xclip
+sudo apt-get install -y ack-grep aria2 cmake ctags curl git tree vim wget xclip gnome-tweak-tool
 ```
 
 Use carefully:
@@ -80,17 +80,12 @@ bash ~/.dotfiles/dottools/vimstall.sh
 
 ## Tweaks
 
-#### Ubuntu 14.04
+#### Ubuntu
 
 ##### Caps Lock as Control
-Add the following line to `/etc/default/keyboard`:
 
-```
-XKBOPTIONS="ctrl:nocaps"
-```
+Use `gnome-tweak-tool`.
 
-Then run:
+##### Don't open nautilus window when auto-mounting device
 
-```
-sudo dpkg-reconfigure -phigh console-setup
-```
+    gsettings set org.gnome.desktop.media-handling automount-open false
