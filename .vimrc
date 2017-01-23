@@ -112,9 +112,9 @@ set colorcolumn=80        " Show vertical bar
 
 " Try to load colorscheme
 try
-    colorscheme molokai
     let g:molokai_original = 1
     let g:rehash256 = 1
+    colorscheme molokai
     " Transparent background
     hi Normal guibg=NONE ctermbg=NONE
     hi CursorLine ctermbg=236 cterm=NONE
