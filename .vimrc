@@ -110,12 +110,16 @@ set background=light
 set encoding=utf-8
 set ffs=unix,dos,mac      " use unix as the standard file type
 set cursorline            " highlight current line
+set colorcolumn=80        " Show vertical bar
 
 " Try to load colorscheme
 try
     colorscheme molokai
     let g:molokai_original = 1
     let g:rehash256 = 1
+    " Transparent background
+    hi Normal guibg=NONE ctermbg=NONE
+    hi CursorLine ctermbg=236 cterm=NONE
 catch /^Vim\%((\a\+)\)\=:E185/
 endtry
 
