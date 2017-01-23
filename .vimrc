@@ -9,13 +9,8 @@
 "    Install plugins     :PluginInstall
 "    Clean plugins       :CleanInstall
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible
-filetype off  
-set rtp+=~/.vim/bundle/Vundle.vim
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree'
-map <C-n> :NERDTreeToggle<CR>
 Plug 'mileszs/ack.vim'                " Ack for vim
 Plug 'scrooloose/nerdcommenter'       " Easy commenting
 Plug 'bling/vim-airline'              " Status bar
@@ -23,7 +18,9 @@ Plug 'airblade/vim-gitgutter'         " Inline git status
 Plug 'tpope/vim-fugitive'             " Git
 Plug 'ctrlpvim/ctrlp.vim'             " Fuzzy file search
 Plug 'tpope/vim-surround'
-Plug 'nvie/vim-flake8'                " [Python] PEP8 Checking
+Plug 'nvie/vim-flake8', { 'for': 'python' } " PEP8 Checking
+Plug 'hdima/python-syntax', { 'for': 'python' }
+Plug 'tmhedberg/simpylfold', { 'for': 'python' } " Better Python indent
 
 " Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
@@ -41,6 +38,7 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
 set history=8000          " set long history
 filetype plugin indent on " enable filetype plugins
 set autoread              " watch for file changes outside vim
