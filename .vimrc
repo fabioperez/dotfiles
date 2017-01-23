@@ -12,38 +12,31 @@
 set nocompatible
 filetype off  
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
-Plugin 'mileszs/ack.vim'                " Ack for vim
-Plugin 'scrooloose/nerdcommenter'       " Easy commenting
-Plugin 'bling/vim-airline'              " Status bar
-Plugin 'airblade/vim-gitgutter'         " Inline git status
-Plugin 'tpope/vim-fugitive'             " Git
-Plugin 'ctrlpvim/ctrlp.vim'             " Fuzzy file search
-Plugin 'tpope/vim-surround'
+Plug 'mileszs/ack.vim'                " Ack for vim
+Plug 'scrooloose/nerdcommenter'       " Easy commenting
+Plug 'bling/vim-airline'              " Status bar
+Plug 'airblade/vim-gitgutter'         " Inline git status
+Plug 'tpope/vim-fugitive'             " Git
+Plug 'ctrlpvim/ctrlp.vim'             " Fuzzy file search
+Plug 'tpope/vim-surround'
+Plug 'nvie/vim-flake8'                " [Python] PEP8 Checking
 
 " Colorschemes
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'tomasr/molokai'
-Plugin 'altercation/vim-colors-solarized'
-
-"Plugin 'mattn/zencoding-vim'
-"Plugin 'ervandew/supertab' 
-"Plugin 'pangloss/vim-javascript'
-"Plugin 'Townk/vim-autoclose'
-"Plugin 'kshenoy/vim-signature'
-"Plugin 'sukima/xmledit'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'tomasr/molokai'
+Plug 'altercation/vim-colors-solarized'
 
 " Snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 
-call vundle#end()
+call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General

@@ -2,7 +2,6 @@
 
 SCRIPTPATH=$(cd "$(dirname "$0")" && pwd)
 echo $SCRIPTPATH
-VUNDLE_PATH="https://github.com/gmarik/Vundle.vim.git"
 
 # Terminal colours
 bold=$(tput bold)
@@ -32,8 +31,10 @@ done
 rm -rf ~/.vim
 rm -f ~/.vimrc
 
-# Install Vundle
-(git clone "${VUNDLE_PATH}" ~/.vim/bundle/Vundle.vim > /dev/null) || { echo "Could not clone Vundle"; exit 1; }
+# Install vim-plug
+(curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim) \
+ || { echo "Could not clone vim-plug"; exit 1; }
 
 # Link .vimrc
 echo $SCRIPTPATH/../.vimrc
@@ -42,6 +43,6 @@ ln -fs $SCRIPTPATH/../.vimrc ~/.vimrc
 # Create undo path
 mkdir -p ~/.vim/undo
 
-# Install Plugins with Vundle
-vim +PluginInstall +qall now
+# Install Plugins with vim-plug
+vim +PlugInstall +qall now
 
