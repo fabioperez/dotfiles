@@ -183,9 +183,9 @@ set undoreload=10000        " number of lines to save for undo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nofoldenable        " dont fold by default
 set foldlevelstart=10   " open most folds by default
-set foldnestmax=10      " deepest fold is 10 levels
-set foldmethod=syntax   " fold based on syntax
-"set foldmethod=indent   "fold based on indent
+set foldnestmax=2      " deepest fold is 10 levels
+"set foldmethod=syntax   " fold based on syntax
+set foldmethod=indent   "fold based on indent
 let javaScript_fold=1         " JavaScript
 let perl_fold=1               " Perl
 let php_folding=1             " PHP
@@ -195,14 +195,19 @@ let sh_fold_enabled=1         " sh
 let vimsyn_folding='af'       " Vim script
 let xml_syntax_folding=1      " XML
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Python specific settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Indent
+au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
+au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
+au BufRead,BufNewFile *.py,*.pyw set expandtab
+au BufRead,BufNewFile *.py set softtabstop=4
+au BufRead,BufNewFile *.py,*.pyw, set textwidth=120
+
+
 """"""""""""" UNDER CONSTRUCTION
-
-
-"Custom file extensions
-let asmsyntax='armasm' 
-let filetype_inc='armasm'
-au! BufRead,BufNewFile *.dasc           setfiletype dasc
-au! Syntax dasc source $HOME/util/vim-scripts/dasc.vim
 
 " Surround
 nmap <silent> <leader>su ysiw
@@ -213,7 +218,3 @@ nmap <silent> <leader>su ysiw
 " <space>ev (edit) | <space>sv (save and reload)
 nmap <silent> <leader>ev :e ~/.vimrc<CR> 
 nmap <silent> <leader>sv :source ~/.vimrc<CR>
-
-" CMD+i Auto-indent entire file
-"map <D-i> mqHmwgg=G`wzt`q
-
