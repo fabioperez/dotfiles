@@ -18,9 +18,25 @@ Plug 'airblade/vim-gitgutter'         " Inline git status
 Plug 'tpope/vim-fugitive'             " Git
 Plug 'ctrlpvim/ctrlp.vim'             " Fuzzy file search
 Plug 'tpope/vim-surround'
-Plug 'nvie/vim-flake8', { 'for': 'python' } " PEP8 Checking
-Plug 'hdima/python-syntax', { 'for': 'python' }
-Plug 'tmhedberg/simpylfold', { 'for': 'python' } " Better Python indent
+Plug 'python-mode/python-mode', { 'for': 'python' }
+    let g:pymode_rope = 0
+    let g:pymode_lint = 1
+        let g:pymode_lint_on_write = 0
+    let g:pymode_lint_checkers = ['pep8', 'pep257', 'pyflakes']
+    let g:pymode_syntax = 1
+    let g:pymode_syntax_all = 1
+    let g:pymode_indent = 1
+    let g:pymode_folding = 1
+    let g:pymode_trim_whitespaces = 1
+    let g:pymode_options_max_line_length = 79
+    let g:pymode_options_colorcolumn = 1
+    let g:pymode_doc = 1
+    let g:pymode_doc_bind = 'K'
+    let g:pymode_virtualenv = 1
+Plug 'Valloric/YouCompleteMe'
+    let g:ycm_collect_identifiers_from_tags_files = 1 " Read tags file
+"Plug 'justinmk/vim-sneak'
+Plug 'easymotion/vim-easymotion'
 
 " Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
@@ -28,10 +44,10 @@ Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
 
 " Snipmate
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
+"Plug 'MarcWeber/vim-addon-mw-utils'
+"Plug 'tomtom/tlib_vim'
+"Plug 'garbas/vim-snipmate'
+"Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -108,7 +124,7 @@ set background=light
 set encoding=utf-8
 set ffs=unix,dos,mac      " use unix as the standard file type
 set cursorline            " highlight current line
-set colorcolumn=80        " Show vertical bar
+set colorcolumn=79        " Show vertical bar
 
 " Try to load colorscheme
 try
@@ -130,8 +146,8 @@ let g:airline_powerline_fonts = 1
 filetype plugin indent on   " detect filetype
 set expandtab               " convert tabs to spaces
 set smarttab                 
-set shiftwidth=2            " one tab = 4 spaces (indentation) 
-set softtabstop=2           " insert / delete 4 spaces at time
+set shiftwidth=4            " one tab = 4 spaces (indentation) 
+set softtabstop=4           " insert / delete 4 spaces at time
 set autoindent              " copy current line indent to new lines
 set cindent
 set wrap                    " wrap lines
@@ -185,7 +201,7 @@ set undoreload=10000        " number of lines to save for undo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nofoldenable        " dont fold by default
 set foldlevelstart=10   " open most folds by default
-set foldnestmax=2      " deepest fold is 10 levels
+set foldnestmax=3      " deepest fold is 10 levels
 "set foldmethod=syntax   " fold based on syntax
 set foldmethod=indent   "fold based on indent
 let javaScript_fold=1         " JavaScript
@@ -206,7 +222,7 @@ au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
 au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
 au BufRead,BufNewFile *.py,*.pyw set expandtab
 au BufRead,BufNewFile *.py set softtabstop=4
-au BufRead,BufNewFile *.py,*.pyw, set textwidth=120
+au BufRead,BufNewFile *.py,*.pyw, set textwidth=80
 
 
 """"""""""""" UNDER CONSTRUCTION
