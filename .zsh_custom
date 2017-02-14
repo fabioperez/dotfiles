@@ -31,6 +31,11 @@ function prezto-update {
     )
 }
 
-# Ctrl+R search backwards
+# Keep some emacs key bindings
 bindkey -v
 bindkey '^R' history-incremental-search-backward
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+
+# Set key timeout to 0.1s (good for vim mode)
+export KEYTIMEOUT=1
