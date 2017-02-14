@@ -4,9 +4,10 @@ set -e
 
 sudo apt-get install -y git-core gcc make autoconf yodl libncursesw5-dev texinfo
 
-git clone git://git.code.sf.net/p/zsh/code zsh 
+wget "https://github.com/zsh-users/zsh/archive/zsh-5.3.1.tar.gz"
+tar -xzf zsh*tar.gz
 
-(cd zsh
+cd zsh*/
 
 ./Util/preconfig
 
@@ -36,9 +37,9 @@ make check
 sudo make install
 
 sudo make install.info
-)
 
-rm -rf zsh
+rm -rf zsh*/
+rm -rf zsh*.tar.gz
 
 # Add zsh to /etc/shells
 command -v zsh | sudo tee -a /etc/shells

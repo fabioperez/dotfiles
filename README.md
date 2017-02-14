@@ -71,9 +71,10 @@ brew install node
 
 1. Install [Prezto](https://github.com/sorin-ionescu/prezto).
 
-2. Source custom zsh config:
+2. Source custom zsh+prezto config:
 ```
 echo -e '\nsource "$HOME/.dotfiles/.zsh_custom"' >> ~/.zshrc
+ln -fs ~/.dotfiles/.zpreztorc ~/.zpreztorc
 ```
 
 #### vim + tmux
