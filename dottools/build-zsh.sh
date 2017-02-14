@@ -4,9 +4,10 @@ set -e
 
 sudo apt-get install -y git-core gcc make autoconf yodl libncursesw5-dev texinfo
 
-wget "https://github.com/zsh-users/zsh/archive/zsh-5.3.1.tar.gz"
+wget "https://github.com/zsh-users/zsh/archive/zsh-5.2.tar.gz"
 tar -xzf zsh*tar.gz
 
+(
 cd zsh*/
 
 ./Util/preconfig
@@ -37,6 +38,7 @@ make check
 sudo make install
 
 sudo make install.info
+)
 
 rm -rf zsh*/
 rm -rf zsh*.tar.gz
