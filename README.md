@@ -9,7 +9,8 @@ git clone https://github.com/fabioperez/dotfiles/ ~/.dotfiles
 ## Install softwares
 ### Debian/Ubuntu
 ```
-sudo apt-get install -y ack-grep aria2 cmake ctags curl git tree vim wget xclip gnome-tweak-tool
+sudo apt-get install -y ack-grep aria2 cmake ctags curl git tree vim wget \
+xclip gnome-tweak-tool libclang-dev
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
