@@ -15,6 +15,7 @@ function check_program {
 check_program "vim"
 check_program "git"
 check_program "wget"
+check_program "npm"
 
 # Prompt for user confirmation
 printf "NOTE: This will ${red}${bold}OVERWRITE${normal} ${bold}~/.vimrc${normal} and ${bold}~/.vim/${normal}\n"
@@ -46,3 +47,5 @@ mkdir -p ~/.vim/undo
 # Install Plugins with vim-plug
 vim +PlugInstall +qall now
 
+cd ~/.vim/plugged/YouCompleteMe
+./install.py --clang-completer --tern-completer

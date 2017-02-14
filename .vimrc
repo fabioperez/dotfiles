@@ -18,36 +18,18 @@ Plug 'airblade/vim-gitgutter'         " Inline git status
 Plug 'tpope/vim-fugitive'             " Git
 Plug 'ctrlpvim/ctrlp.vim'             " Fuzzy file search
 Plug 'tpope/vim-surround'
-Plug 'python-mode/python-mode', { 'for': 'python' }
-    let g:pymode_rope = 0
-    let g:pymode_lint = 1
-        let g:pymode_lint_on_write = 0
-    let g:pymode_lint_checkers = ['pep8', 'pep257', 'pyflakes']
-    let g:pymode_syntax = 1
-    let g:pymode_syntax_all = 1
-    let g:pymode_indent = 1
-    let g:pymode_folding = 1
-    let g:pymode_trim_whitespaces = 1
-    let g:pymode_options_max_line_length = 79
-    let g:pymode_options_colorcolumn = 1
-    let g:pymode_doc = 1
-    let g:pymode_doc_bind = 'K'
-    let g:pymode_virtualenv = 1
+Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
+Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'Valloric/YouCompleteMe'
     let g:ycm_collect_identifiers_from_tags_files = 1 " Read tags file
-"Plug 'justinmk/vim-sneak'
+    let g:ycm_min_num_of_chars_for_completion = 3
+    let g:ycm_python_binary_path = 'python'
 Plug 'easymotion/vim-easymotion'
 
 " Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
-
-" Snipmate
-"Plug 'MarcWeber/vim-addon-mw-utils'
-"Plug 'tomtom/tlib_vim'
-"Plug 'garbas/vim-snipmate'
-"Plug 'honza/vim-snippets'
 
 call plug#end()
 
