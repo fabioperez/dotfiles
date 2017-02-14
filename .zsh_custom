@@ -30,3 +30,7 @@ function prezto-update {
       git pull && git submodule update --init --recursive
     )
 }
+
+# Ctrl+R search backwards
+bindkey -v
+bindkey '^R' history-incremental-search-backward
