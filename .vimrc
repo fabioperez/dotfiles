@@ -107,7 +107,8 @@ set background=light
 set encoding=utf-8
 set ffs=unix,dos,mac      " use unix as the standard file type
 set cursorline            " highlight current line
-set colorcolumn=79        " Show vertical bar
+set colorcolumn=80        " Show vertical bar
+set textwidth=79
 
 " Try to load colorscheme
 try
