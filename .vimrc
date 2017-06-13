@@ -206,7 +206,7 @@ au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
 au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
 au BufRead,BufNewFile *.py,*.pyw set expandtab
 au BufRead,BufNewFile *.py set softtabstop=4
-au BufRead,BufNewFile *.py,*.pyw, set textwidth=80
+au BufRead,BufNewFile *.py,*.pyw, set textwidth=79
 
 
 """"""""""""" UNDER CONSTRUCTION
