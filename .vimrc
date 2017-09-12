@@ -99,6 +99,9 @@ nnoremap n nzzzv
 " keep search matches in the middle of the window.
 nnoremap N Nzzzv  
 
+" Use // to search selected text
+vnoremap // y/<C-R>"<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colours and Fonts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -147,7 +150,8 @@ map k gk
 " next buffer        <space>a
 " delete buffer      <space>q
 nmap <silent> <leader>w <c-w>w 
-nmap <silent> <leader>a :bnext<CR> 
+nmap <silent> <leader>a :bprev<CR>
+nmap <silent> <leader>d :bnext<CR>
 nmap <silent> <leader>q :bdelete<CR> 
 
 " return to last edit position when opening files
