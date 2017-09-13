@@ -63,7 +63,7 @@ set notimeout
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set scrolloff=10            " when moving with j/k show at least
 " 10 lines after/befor current line
-set wildmenu                " improve vim command-line completion 
+set wildmenu                " improve vim command-line completion
 set wildignore=*.o,*~,*.pyc " ignore compiled files
 set ruler                   " show line number on status bar
 set number                  " show current line number
@@ -88,16 +88,16 @@ set guioptions-=T           " remove toolbar from MacVim
 " => Search
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ignorecase    " ignore case when searching
-set smartcase     " ignore case if search pattern is all 
+set smartcase     " ignore case if search pattern is all
 " lowercase, case-sensitive otherwise
 set hlsearch      " highlight search
 set incsearch     " show search matches as you type
 set magic         " better regular expressions
 
 " keep search matches in the middle of the window.
-nnoremap n nzzzv  
+nnoremap n nzzzv
 " keep search matches in the middle of the window.
-nnoremap N Nzzzv  
+nnoremap N Nzzzv
 
 " Use // to search selected text
 vnoremap // y/<C-R>"<CR>
@@ -106,7 +106,7 @@ vnoremap // y/<C-R>"<CR>
 " => Colours and Fonts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable             " syntax highlighting
-set background=light  
+set background=light
 set encoding=utf-8
 set ffs=unix,dos,mac      " use unix as the standard file type
 set cursorline            " highlight current line
@@ -132,8 +132,8 @@ let g:airline_powerline_fonts = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on   " detect filetype
 set expandtab               " convert tabs to spaces
-set smarttab                 
-set shiftwidth=4            " one tab = 4 spaces (indentation) 
+set smarttab
+set shiftwidth=4            " one tab = 4 spaces (indentation)
 set softtabstop=4           " insert / delete 4 spaces at time
 set autoindent              " copy current line indent to new lines
 set cindent
@@ -149,10 +149,10 @@ map k gk
 " next window        <space>w
 " next buffer        <space>a
 " delete buffer      <space>q
-nmap <silent> <leader>w <c-w>w 
+nmap <silent> <leader>w <c-w>w
 nmap <silent> <leader>a :bprev<CR>
 nmap <silent> <leader>d :bnext<CR>
-nmap <silent> <leader>q :bdelete<CR> 
+nmap <silent> <leader>q :bdelete<CR>
 
 " return to last edit position when opening files
 autocmd BufReadPost *
@@ -222,5 +222,5 @@ nmap <silent> <leader>su ysiw
 
 " Quickly edit/reload the vimrc file
 " <space>ev (edit) | <space>sv (save and reload)
-nmap <silent> <leader>ev :e ~/.vimrc<CR> 
+nmap <silent> <leader>ev :e ~/.vimrc<CR>
 nmap <silent> <leader>sv :source ~/.vimrc<CR>
