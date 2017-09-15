@@ -138,6 +138,7 @@ set softtabstop=4           " insert / delete 4 spaces at time
 set autoindent              " copy current line indent to new lines
 set cindent
 set wrap                    " wrap lines
+set cino+=(0                " align on parenthesis
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
