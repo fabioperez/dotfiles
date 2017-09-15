@@ -21,7 +21,7 @@ Plug 'tpope/vim-surround'
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'tmhedberg/SimpylFold', { 'for' : 'python' }
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do' : './install.py --clang-completer --tern-completer' }
     let g:ycm_collect_identifiers_from_tags_files = 1 " Read tags file
     let g:ycm_min_num_of_chars_for_completion = 3
     let g:ycm_python_binary_path = 'python'

@@ -46,6 +46,3 @@ mkdir -p ~/.vim/undo
 
 # Install Plugins with vim-plug
 vim +PlugInstall +qall now
-
-cd ~/.vim/plugged/YouCompleteMe
-./install.py --clang-completer --tern-completer
