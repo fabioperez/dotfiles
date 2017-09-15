@@ -191,8 +191,7 @@ set undoreload=10000        " number of lines to save for undo
 set nofoldenable        " dont fold by default
 set foldlevelstart=10   " open most folds by default
 set foldnestmax=3      " deepest fold is 10 levels
-"set foldmethod=syntax   " fold based on syntax
-set foldmethod=indent   "fold based on indent
+set foldmethod=syntax   " fold based on syntax
 let javaScript_fold=1         " JavaScript
 let perl_fold=1               " Perl
 let php_folding=1             " PHP
