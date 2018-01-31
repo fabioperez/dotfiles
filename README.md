@@ -36,12 +36,12 @@ sudo apt-get install g++ gcc
     sudo apt-get -y remove tmux
     sudo apt-get -y install libevent-dev ncurses-dev
     cd ~
-    wget https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz
-    tar -zxf tmux-2.2.tar.gz
-    (cd tmux-2.2
-    ./configure && make
-    sudo make install)
-    rm -rf tmux-2.2
+    wget https://github.com/tmux/tmux/releases/download/2.6/tmux-2.6.tar.gz
+    tar -zxf tmux-2.6.tar.gz
+    (cd tmux-2.6
+     ./configure && make
+     sudo make install)
+    rm -rf tmux-2.6
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 Open tmux and hit `prefix + I` to download the plugins.
@@ -82,7 +82,9 @@ ln -fs ~/.dotfiles/.zpreztorc ~/.zpreztorc
 
 #### vim + tmux
 ```
-ln -fs ~/.dotfiles/.tmux-2.2.conf ~/.tmux.conf
+git clone https://github.com/gpakosz/.tmux.git
+ln -s -f .tmux/.tmux.conf
+ln -fs ~/.dotfiles/.tmux.conf.local ~/.tmux.conf.local
 bash ~/.dotfiles/dottools/vimstall.sh
 ```
 
