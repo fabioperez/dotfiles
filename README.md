@@ -64,9 +64,7 @@ exit
 
 ### Mac OS X
 ```
-brew install vim
-brew install zsh
-brew install node
+brew install vim zsh node tmux fzf aria2 ripgrep
 ```
 ## Config files
 
