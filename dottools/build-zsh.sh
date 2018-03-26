@@ -4,7 +4,7 @@ set -e
 
 sudo apt-get install -y git-core gcc make autoconf yodl libncursesw5-dev texinfo
 
-wget "https://github.com/zsh-users/zsh/archive/zsh-5.2.tar.gz"
+wget "https://github.com/zsh-users/zsh/archive/zsh-5.4.2.tar.gz"
 tar -xzf zsh*tar.gz
 
 (
