@@ -13,19 +13,31 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'mileszs/ack.vim'                " Ack for vim
 Plug 'scrooloose/nerdcommenter'       " Easy commenting
-Plug 'bling/vim-airline'              " Status bar
+Plug 'vim-airline/vim-airline'        " Status bar
+Plug 'vim-airline/vim-airline-themes'
+    let g:airline_left_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_theme = 'badwolf'
 Plug 'airblade/vim-gitgutter'         " Inline git status
 Plug 'tpope/vim-fugitive'             " Git
 Plug 'ctrlpvim/ctrlp.vim'             " Fuzzy file search
+if executable('rg')
+    set grepprg=rg\ --color=never
+    let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+    let g:ctrlp_use_caching = 0
+    let g:ctrlp_custom_ignore = 'DS_Store\|git\|lmdb'
+endif
 Plug 'tpope/vim-surround'
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'tmhedberg/SimpylFold', { 'for' : 'python' }
 Plug 'Valloric/YouCompleteMe', { 'do' : './install.py --clang-completer --tern-completer' }
-    let g:ycm_collect_identifiers_from_tags_files = 1 " Read tags file
-    let g:ycm_min_num_of_chars_for_completion = 3
+    "let g:ycm_collect_identifiers_from_tags_files = 0 " Read tags file
+    let g:ycm_min_num_of_chars_for_completion = 2
     let g:ycm_python_binary_path = 'python'
 Plug 'easymotion/vim-easymotion'
+Plug 'octol/vim-cpp-enhanced-highlight'
+"Plug 'majutsushi/tagbar'
 
 " Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
@@ -110,8 +122,8 @@ set background=light
 set encoding=utf-8
 set ffs=unix,dos,mac      " use unix as the standard file type
 set cursorline            " highlight current line
-set colorcolumn=80        " Show vertical bar
-set textwidth=79
+set colorcolumn=100        " Show vertical bar
+set textwidth=99
 
 " Try to load colorscheme
 try
@@ -154,6 +166,9 @@ nmap <silent> <leader>w <c-w>w
 nmap <silent> <leader>a :bprev<CR>
 nmap <silent> <leader>d :bnext<CR>
 nmap <silent> <leader>q :bdelete<CR>
+
+" Delete without yank
+nnoremap <leader><leader>d "_d
 
 " return to last edit position when opening files
 autocmd BufReadPost *
@@ -210,7 +225,7 @@ au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
 au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
 au BufRead,BufNewFile *.py,*.pyw set expandtab
 au BufRead,BufNewFile *.py set softtabstop=4
-au BufRead,BufNewFile *.py,*.pyw, set textwidth=79
+au BufRead,BufNewFile *.py,*.pyw, set textwidth=99
 
 
 """"""""""""" UNDER CONSTRUCTION
