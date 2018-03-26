@@ -40,3 +40,14 @@ bindkey '^E' end-of-line
 
 # Set key timeout to 0.1s (good for vim mode)
 export KEYTIMEOUT=1
+
+# Theme
+source $HOME/.dotfiles/powerless.zsh false
+
+function check_cmd () {
+    return $(type "$1" > /dev/null)
+}
+
+if check_cmd ack; then
+    alias hl='ack --passthru'
+fi
