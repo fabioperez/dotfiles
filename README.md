@@ -9,13 +9,19 @@ git clone https://github.com/fabioperez/dotfiles/ ~/.dotfiles
 ## Install softwares
 ### Debian/Ubuntu
 ```
+sudo add-apt-repository ppa:dyatlov-igor/materia-theme -y
+sudo add-apt-repository ppa:snwh/pulp -y
+sudo apt update
 sudo apt-get install -y ack-grep aria2 cmake ctags curl git tree vim wget \
-xclip gnome-tweak-tool libclang-dev
+xclip unity-tweak-tool libclang-dev materia-theme paper-icon-theme
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 sudo apt-get install -y nodejs
+sudo snap install rg
 
 # LinuxBrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+
+
 ```
 
 Use carefully:
@@ -43,24 +49,24 @@ sudo apt-get install g++ gcc
      sudo make install)
     rm -rf tmux-2.6
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-Open tmux and hit `prefix + I` to download the plugins.
   
 #### Zsh
 
     bash ~/.dotfiles/dottools/build-zsh.sh
     
-#### [Powerline fonts](http://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin)
+#### Fonts
+    
+    (cd ~
+     mkdir -p ~/.fonts
+     wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/SourceCodePro.zip
+     wget https://github.com/google/roboto/releases/download/v2.136/roboto-hinted.zip
+     unzip SourceCodePro.zip -d ~/.fonts/
+     unzip roboto-hinted.zip -d ~/.fonts/
+     rm -f SourceCodePro.zip
+     rm -f roboto-hinted.zip
+     fc-cache -f -v
+    )
 
-```
-sudo -i
-su -c 'pip install git+git://github.com/Lokaltog/powerline'
-wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
-sudo mv PowerlineSymbols.otf /usr/share/fonts/
-sudo fc-cache -vf
-sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
-exit
-```
 
 ### Mac OS X
 ```
