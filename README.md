@@ -7,32 +7,33 @@ git clone https://github.com/fabioperez/dotfiles/ ~/.dotfiles
 ```
 
 ## Install softwares
+
+### UNIX (Ubuntu / macOS)
+    DIFF_SO_FANCY='https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy'
+    sudo wget -qN $DIFF_SO_FANCY -P /usr/local/bin
+    sudo chmod +x /usr/local/bin/diff-so-fancy
+
+    (cd ~
+     git clone https://github.com/direnv/direnv
+     cd direnv
+     make install
+    )
+
 ### Debian/Ubuntu
-```
-sudo add-apt-repository ppa:dyatlov-igor/materia-theme -y
-sudo add-apt-repository ppa:snwh/pulp -y
-sudo apt update
-sudo apt-get install -y ack-grep aria2 cmake ctags curl git tree vim wget \
-xclip unity-tweak-tool libclang-dev materia-theme paper-icon-theme
-curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-sudo apt-get install -y nodejs
-sudo snap install rg
+    sudo add-apt-repository ppa:dyatlov-igor/materia-theme -y
+    sudo add-apt-repository ppa:snwh/pulp -y
+    sudo apt update
+    sudo apt-get install -y ack-grep aria2 cmake ctags curl git tree vim wget \
+    xclip unity-tweak-tool libclang-dev materia-theme paper-icon-theme meld
+    curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+    sudo apt-get install -y nodejs
+    sudo snap install rg
 
-# LinuxBrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
-
-
-```
-
-Use carefully:
-```
-sudo apt-get install g++ gcc
-```
+    # LinuxBrew
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
 
 #### Guake
-
     sudo apt-get install python-dbus
-
     git clone https://github.com/Guake/guake
     (cd guake
     ./dev.sh --install)
@@ -51,11 +52,9 @@ sudo apt-get install g++ gcc
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   
 #### Zsh
-
     bash ~/.dotfiles/dottools/build-zsh.sh
     
 #### Fonts
-    
     (cd ~
      mkdir -p ~/.fonts
      wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/SourceCodePro.zip
@@ -69,9 +68,9 @@ sudo apt-get install g++ gcc
 
 
 ### Mac OS X
-```
-brew install vim zsh node tmux fzf aria2 ripgrep
-```
+    brew install vim zsh node tmux fzf aria2 ripgrep
+
+
 ## Config files
 
 #### zsh
@@ -85,12 +84,14 @@ ln -fs ~/.dotfiles/.zpreztorc ~/.zpreztorc
 ```
 
 #### vim + tmux
-```
-git clone https://github.com/gpakosz/.tmux.git
-ln -s -f .tmux/.tmux.conf
-ln -fs ~/.dotfiles/.tmux.conf.local ~/.tmux.conf.local
-bash ~/.dotfiles/dottools/vimstall.sh
-```
+    git clone https://github.com/gpakosz/.tmux.git
+    ln -s -f .tmux/.tmux.conf
+    ln -fs ~/.dotfiles/.tmux.conf.local ~/.tmux.conf.local
+    bash ~/.dotfiles/dottools/vimstall.sh
+
+### git
+    cp ~/.dotfiles/.gitconfig ~
+    git config --global user.email "EMAIL_HERE"
 
 ## Tweaks
 
