@@ -1,12 +1,17 @@
 autoload zmv
 
+function check_cmd () {
+    return $(type "$1" > /dev/null)
+}
+
 if [ "$(uname)" = "Darwin" ]; then
   # Mac-only commands
 elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
   # Linux-only commands
-  alias pbcopy='xclip -selection clipboard'
-  alias pbpaste='xclip -selection clipboard -o'
-  alias ack='ack-grep'
+  if check_cmd xclip; then
+      alias pbcopy='xclip -selection clipboard'
+      alias pbpaste='xclip -selection clipboard -o'
+  fi
   test -d ~/.linuxbrew && PATH="$HOME/.linuxbrew/bin:$PATH"
 fi
 
@@ -16,11 +21,6 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 function reload {
-    (
-      echo "Updating dotfiles..."
-      cd ~/.dotfiles
-      git pull
-    )
     source ~/.zshrc
     tmux source-file ~/.tmux.conf
 }
@@ -44,10 +44,13 @@ export KEYTIMEOUT=1
 # Theme
 source $HOME/.dotfiles/powerless.zsh false
 
-function check_cmd () {
-    return $(type "$1" > /dev/null)
-}
+# Direnv
+if check_cmd direnv; then
+    eval "$(direnv hook zsh)"
+fi
 
-if check_cmd ack; then
-    alias hl='ack --passthru'
+# Ack
+if check_cmd ack-grep; then
+  alias ack='ack-grep'
+  alias hl='ack --passthru'
 fi
