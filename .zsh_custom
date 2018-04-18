@@ -47,6 +47,10 @@ source $HOME/.dotfiles/powerless.zsh false
 # Direnv
 if check_cmd direnv; then
     eval "$(direnv hook zsh)"
+    function venv_new {
+        echo "layout python3" > .envrc
+        direnv allow
+    }
 fi
 
 # Ack
