@@ -17,7 +17,12 @@ git clone https://github.com/fabioperez/dotfiles/ ~/.dotfiles
      git clone https://github.com/direnv/direnv
      cd direnv
      make install
+     
+     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+     ~/.fzf/install
     )
+    
+    
 
 ### Debian/Ubuntu
     sudo add-apt-repository ppa:dyatlov-igor/materia-theme -y
@@ -68,7 +73,8 @@ git clone https://github.com/fabioperez/dotfiles/ ~/.dotfiles
 
 
 ### Mac OS X
-    brew install vim zsh node tmux fzf aria2 ripgrep
+    brew install vim zsh node tmux fzf aria2 ripgrep diff-so-fancy
+    $(brew --prefix)/opt/fzf/install
 
 #### Fonts
     (cd ~
