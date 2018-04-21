@@ -70,6 +70,16 @@ git clone https://github.com/fabioperez/dotfiles/ ~/.dotfiles
 ### Mac OS X
     brew install vim zsh node tmux fzf aria2 ripgrep
 
+#### Fonts
+    (cd ~
+     mkdir -p ~/.fonts
+     wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/SourceCodePro.zip
+     wget https://github.com/google/roboto/releases/download/v2.136/roboto-hinted.zip
+     unzip SourceCodePro.zip -d /Library/Fonts
+     unzip roboto-hinted.zip -d /Library/Fonts
+     rm -f SourceCodePro.zip
+     rm -f roboto-hinted.zip
+    )
 
 ## Config files
 
