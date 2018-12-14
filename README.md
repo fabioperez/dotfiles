@@ -25,11 +25,11 @@ git clone https://github.com/fabioperez/dotfiles/ ~/.dotfiles
     
 
 ### Debian/Ubuntu
-    sudo add-apt-repository ppa:dyatlov-igor/materia-theme -y
     sudo add-apt-repository ppa:snwh/pulp -y
     sudo apt update
     sudo apt-get install -y ack-grep aria2 cmake ctags curl git tree vim wget \
-    xclip unity-tweak-tool libclang-dev materia-theme paper-icon-theme meld
+    xclip unity-tweak-tool libclang-dev materia-gtk-theme paper-icon-theme meld \
+    npm curl cmake gnome-tweak-tool
     curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
     sudo apt-get install -y nodejs
     sudo snap install rg
@@ -41,20 +41,21 @@ git clone https://github.com/fabioperez/dotfiles/ ~/.dotfiles
     sudo apt-get install python-dbus
     git clone https://github.com/Guake/guake
     (cd guake
-    ./dev.sh --install)
+     ./scripts/bootstrap-dev-debian.sh run make
+     make
+     sudo make install)
     rm -rf guake
 
 #### tmux
     sudo apt-get -y remove tmux
     sudo apt-get -y install libevent-dev ncurses-dev
     cd ~
-    wget https://github.com/tmux/tmux/releases/download/2.6/tmux-2.6.tar.gz
-    tar -zxf tmux-2.6.tar.gz
-    (cd tmux-2.6
-     ./configure && make
-     sudo make install)
-    rm -rf tmux-2.6
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    wget https://github.com/tmux/tmux/releases/download/2.8/tmux-2.8.tar.gz
+    tar -zxf tmux-2.8.tar.gz
+    (cd tmux-2.8
+    ./configure && make
+    sudo make install)
+    rm -rf tmux-2.8 tmux-2.8.tar.gz
   
 #### Zsh
     bash ~/.dotfiles/dottools/build-zsh.sh
@@ -103,6 +104,7 @@ ln -fs ~/.dotfiles/.zpreztorc ~/.zpreztorc
     git clone https://github.com/gpakosz/.tmux.git
     ln -s -f .tmux/.tmux.conf
     ln -fs ~/.dotfiles/.tmux.conf.local ~/.tmux.conf.local
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     bash ~/.dotfiles/dottools/vimstall.sh
 
 ### git
