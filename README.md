@@ -74,7 +74,7 @@ git clone https://github.com/fabioperez/dotfiles/ ~/.dotfiles
 
 
 ### Mac OS X
-    brew install vim zsh node tmux fzf aria2 ripgrep diff-so-fancy go
+    brew install vim zsh node tmux fzf aria2 ripgrep diff-so-fancy go wget cmake
     $(brew --prefix)/opt/fzf/install
 
 #### Fonts
