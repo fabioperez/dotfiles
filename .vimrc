@@ -31,13 +31,7 @@ Plug 'tpope/vim-surround'
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'tmhedberg/SimpylFold', { 'for' : 'python' }
-Plug 'Valloric/YouCompleteMe', { 'do' : './install.py --clang-completer --tern-completer' }
-    "let g:ycm_collect_identifiers_from_tags_files = 0 " Read tags file
-    let g:ycm_min_num_of_chars_for_completion = 2
-    let g:ycm_python_binary_path = 'python'
 Plug 'easymotion/vim-easymotion'
-Plug 'octol/vim-cpp-enhanced-highlight'
-"Plug 'majutsushi/tagbar'
 
 " Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
@@ -124,17 +118,7 @@ set ffs=unix,dos,mac      " use unix as the standard file type
 set cursorline            " highlight current line
 set colorcolumn=100        " Show vertical bar
 set textwidth=99
-
-" Try to load colorscheme
-try
-    let g:molokai_original = 1
-    let g:rehash256 = 1
-    colorscheme molokai
-    " Transparent background
-    hi Normal guibg=NONE ctermbg=NONE
-    hi CursorLine ctermbg=236 cterm=NONE
-catch /^Vim\%((\a\+)\)\=:E185/
-endtry
+colorscheme solarized
 
 let g:Powerline_symbols="fancy"
 let g:airline_powerline_fonts = 1
