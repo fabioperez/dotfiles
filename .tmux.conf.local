@@ -272,3 +272,7 @@ bind-key C-a last-window
 
 # Disable repeat time
 set-option -g repeat-time 0
+
+# Fig Tmux Integration: Enabled
+source-file ~/.fig/tmux
+# End of Fig Tmux Integration
