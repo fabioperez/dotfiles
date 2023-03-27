@@ -11,7 +11,7 @@ git clone https://github.com/fabioperez/dotfiles/ ~/.dotfiles
 ### macOS
 
 ```bash
-brew install vim zsh node tmux fzf aria2 ripgrep go wget cmake fig git-delta pyenv
+brew install vim zsh node tmux fzf aria2 ripgrep go wget cmake fig git-delta pyenv pyenv-virtualenv
 $(brew --prefix)/opt/fzf/install
 ```
 
